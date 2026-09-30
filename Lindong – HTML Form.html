@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+... <!-- meta charset and title -->
+</head>
+<body>
+<h1>HTML Form</h1>
+<form id="myForm" action="#" method="post">
+<fieldset>
+<strong> <legend>Personal Information</legend> </strong>
+
+<p>
+    <label for="name">Name:</label>
+    <input type="name" id="name" name="name" required>
+</p>
+
+<p>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+</p>
+
+<!-- Gender Category -->
+<fieldset>
+    <legend>Gender</legend>
+<p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+    </p>
+
+    <p>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+    </p>
+
+    <p>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+    </p>
+
+</fieldset>
+
+<!-- Hobbies Category -->
+<fieldset>
+    <legend>Hobbies</legend>
+    <p>
+        <input type="checkbox" id="Watching Movies" name="Practicing Musical Instruments" value="Playing">
+        <label for="reading">Reading</label>
+    </p>
+
+    <p>
+        <input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+        <label for="gaming">Gaming</label>
+    </p>
+
+    <p>
+        <input type="checkbox" id="sports" name="hobbies" value="Sports">
+        <label for="sports">Sports</label>
+    </p>
+
+</fieldset>
+
+<p>
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="5" cols="40"
+        placeholder="Enter your comments here..."></textarea>
+</p>
+
+<p>
+    <label for="submit-button">Submit Form:</label>
+    <br>
+    <button type="submit" id="submit-button">Submit</button>
+</p>
+
+<!-- Feedback Message -->
+<p id="feedback"></p>
+
+<script>
+    const form = document.getElementById("myForm");
+    const feedback = document.getElementById("feedback");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        feedback.textContent = "Thank you! Your form has been submitted successfully.";
+        feedback.style.color = "green";
+    });
+</script>
+</form>
+</body>
+</html>
